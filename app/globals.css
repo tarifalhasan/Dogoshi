@@ -23,4 +23,11 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  .container {
+    @apply px-5;
+  }
+}
+
+.sdsd {
+  background-color: #deac00, #ecbfbf, #f40010, #fdd755;
 }

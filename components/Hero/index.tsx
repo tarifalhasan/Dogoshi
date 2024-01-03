@@ -5,13 +5,13 @@ import Header from "../Header";
 import { Button } from "../ui/button";
 
 const Hero = () => (
-  <div className=" relative pb-[3%] n bg-black">
+  <div className=" relative overflow-hidden pb-[3%] n bg-black">
     <Header />
-    <div className="pt-[100px]">
+    <div className="pt-[160px]">
       <div className="flex-col flex items-center space-y-[25px]">
-        <div className="flex flex-col -space-y-6 items-center">
+        <div className="flex  flex-col -space-y-6 items-center">
           <div className=" inline-flex space-x-4">
-            <h2 className=" text-[80px] text-white font-extrabold">
+            <h2 className=" text-[35px] md:text-[60px] lg:text-[80px] text-white font-extrabold">
               Unlocking 21 Million
             </h2>
             <Image
@@ -19,12 +19,13 @@ const Hero = () => (
               alt="Cryptocurrency"
               width={72}
               height={72}
+              className=" w-12 md:w-auto"
             />
           </div>
           <div>
-            <h3 className="text-[80px] inline-flex text-center font-extrabold tracking-[1.6px] bg-clip-text g_txt  bg-gradient-2">
+            <h2 className=" text-[35px] sm:text-[60px] lg:text-[80px] inline-flex text-center font-extrabold tracking-[1.6px] bg-clip-text g_txt  bg-gradient-2">
               Dogoshi
-            </h3>
+            </h2>
           </div>
         </div>
         <p className=" text-2xl text-white font-medium tracking-[0.72px]">
@@ -34,13 +35,12 @@ const Hero = () => (
       </div>
       <div
         className={cn(
-          " max-w-[1738px] container flex-wrap xl:flex-nowrap mx-auto  token_list  pt-[40px] gap-3  flex  justify-between"
+          " max-w-[1738px] container flex-wrap xl:flex-nowrap mx-auto  token_list  pt-[40px] gap-3 grid grid-cols-3 md:flex  justify-between"
         )}
       >
         {TokenList.map((token, index) => (
-          <>
+          <div key={token.id}>
             <div
-              key={token.id}
               style={{
                 transform: `rotate(${token.roateX}deg) translateY(${token.roateY}%)`,
               }}
@@ -58,7 +58,6 @@ const Hero = () => (
               />
             </div>
             <div
-              key={token.id}
               className={cn("curved-token xl:hidden  relative ", "transform ")}
             >
               <Image
@@ -69,7 +68,7 @@ const Hero = () => (
                 width={130.456}
               />
             </div>
-          </>
+          </div>
         ))}
       </div>
     </div>
