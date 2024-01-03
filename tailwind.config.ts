@@ -20,9 +20,11 @@ const config: Config = {
           "linear-gradient(180deg, #DA323D 0%, rgba(228, 25, 39, 0.00) 100%)",
         "f2-bulp":
           "linear-gradient(180deg, #B7BA31 0%, rgba(185, 113, 61, 0.00) 100%)",
+        gradient1: "linear-gradient(99deg, #FA7E07 40.51%, #F40010 109.42%)",
       },
       colors: {
         "dark-50": "#E9F1EE",
+        "gray-50": "#415162",
         secondary: {
           DEFAULT: "hsla(46, 100%, 44%, 1)",
           foreground: "hsla(0, 0%, 0%, 1)",

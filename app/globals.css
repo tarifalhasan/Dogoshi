@@ -19,12 +19,16 @@ body {
 }
 
 @layer components {
-  .g_txt {
+  .g_txt,
+  .bg-clip-text {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   .container {
     @apply px-5;
+  }
+  .heading1 {
+    @apply;
   }
 }
 

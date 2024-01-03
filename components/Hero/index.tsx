@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 const Hero = () => (
   <div className=" relative overflow-hidden pb-[3%] n bg-black">
     <Header />
-    <div className="pt-[160px]">
+    <div className="pt-[80px]">
       <div className="flex-col flex items-center space-y-[25px]">
         <div className="flex  flex-col -space-y-6 items-center">
           <div className=" inline-flex space-x-4">
