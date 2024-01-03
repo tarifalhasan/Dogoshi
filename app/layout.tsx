@@ -17,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cabinet_grotesk.className}>{children}</body>
+      <body className={cabinet_grotesk.className}>
+        <main> {children}</main>
+      </body>
     </html>
   );
 }
