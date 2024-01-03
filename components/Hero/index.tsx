@@ -1,9 +1,11 @@
+import { TokenList } from "@/constant";
+import { cn } from "@/utils";
 import Image from "next/image";
 import Header from "../Header";
 import { Button } from "../ui/button";
 
 const Hero = () => (
-  <div className=" relative min-h-screen bg-black">
+  <div className=" relative pb-[3%] n bg-black">
     <Header />
     <div className="pt-[100px]">
       <div className="flex-col flex items-center space-y-[25px]">
@@ -29,6 +31,46 @@ const Hero = () => (
           Mine, Use, Earn
         </p>
         <Button variant={"secondary"}>Buy Now</Button>
+      </div>
+      <div
+        className={cn(
+          " max-w-[1738px] container flex-wrap xl:flex-nowrap mx-auto  token_list  pt-[40px] gap-3  flex  justify-between"
+        )}
+      >
+        {TokenList.map((token, index) => (
+          <>
+            <div
+              key={token.id}
+              style={{
+                transform: `rotate(${token.roateX}deg) translateY(${token.roateY}%)`,
+              }}
+              className={cn(
+                "curved-token hidden xl:block relative ",
+                "transform "
+              )}
+            >
+              <Image
+                className=" "
+                src={token.icon}
+                alt="dsfdf"
+                height={133.952}
+                width={130.456}
+              />
+            </div>
+            <div
+              key={token.id}
+              className={cn("curved-token xl:hidden  relative ", "transform ")}
+            >
+              <Image
+                className=" "
+                src={token.icon}
+                alt="dsfdf"
+                height={133.952}
+                width={130.456}
+              />
+            </div>
+          </>
+        ))}
       </div>
     </div>
   </div>
