@@ -1,4 +1,5 @@
 import AirDrop from "@/components/Airdrop";
+import Blogs from "@/components/Blogs";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Mining from "@/components/Mining";
@@ -12,9 +13,8 @@ export default function Home() {
       <Mining />
       <Tokenomics />
       <RoadMap />
-
       <AirDrop />
-
+      <Blogs />
       <Footer />
     </>
   );
