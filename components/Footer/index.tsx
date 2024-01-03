@@ -30,8 +30,8 @@ const Footer = () => {
             className=" relative z-10"
           />
         </div>
-        <h2 className="text-center pt-4 text-4xl md:text-6xl font-normal text-white">
-          Join Our{" "}
+        <h2 className="text-center pt-5 text-[2.5rem] leading-[1.2] md:text-6xl font-normal text-white">
+          Join Our <br className=" lg:hidden" />
           <span className=" bg-clip-text font-bold bg-g3 g_txt">Community</span>
         </h2>
         <ul className=" relative z-40 flex pt-8 justify-center items-center space-x-[38px]">
@@ -57,8 +57,8 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="w-[588px] h-[470px] transform rotate-[-67.22deg] rounded-full bg-f1-bulb blur-[196px] z-10 absolute translate-y-[60%] "></div>
-      <div className="w-[588px] h-[470px] transform  left-[55%] rotate-[-67.22deg] rounded-full bg-f2-bulp blur-[196px] z-20 absolute translate-y-[60%] "></div>
+      <div className="w-[588px] h-[470px] transform rotate-[-67.22deg] rounded-full bg-tblub blur-[300px] z-10 absolute translate-y-[60%] " />
+      <div className="w-[488px] hidden lg:block h-[370px] transform  left-[55%] rotate-[-67.22deg] rounded-full bg-f2-bulp blur-[223px] z-20 absolute translate-y-[80%] "></div>
     </footer>
   );
 };

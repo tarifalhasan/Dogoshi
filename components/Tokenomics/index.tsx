@@ -19,7 +19,7 @@ function TokenDetail({
 }
 const Tokenomics = () => {
   return (
-    <section className="mb-10 bg-[#060404] py-12">
+    <section id="tokenomics" className="mb-10 bg-[#060404] py-12">
       <div className=" overflow-hidden relative  ">
         <div className=" relative z-20 container ">
           <p className="text-xl text-white opacity-60 font-medium lg:text-2xl">

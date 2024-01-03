@@ -1,9 +1,12 @@
 import Image from "next/image";
 import { ArrowRight } from "../icons";
 
-const BuyMineEarn = () => {
+const Mining = () => {
   return (
-    <div className=" py-12 space-y-[60px] lg:space-y-[80px] lg:py-20 container w-full">
+    <div
+      id="mining"
+      className=" py-12 space-y-[60px] lg:space-y-[80px] lg:py-20 container w-full"
+    >
       <div className=" flex gap-16 flex-col lg:flex-row lg:items-center justify-between">
         <div className="flex flex-row space-y-3 lg:flex-col w-full items-center lg:items-start justify-between">
           <h4 className=" text-[40px] lg:text-[48px]">Buy</h4>
@@ -47,4 +50,4 @@ const BuyMineEarn = () => {
   );
 };
 
-export default BuyMineEarn;
+export default Mining;

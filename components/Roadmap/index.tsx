@@ -3,7 +3,10 @@ import Shape2 from "../ui/shape2";
 
 const RoadMap = () => {
   return (
-    <section className=" my-[30px] my:py-[70px] lg:my-[100px]  container">
+    <section
+      id="road_map"
+      className=" my-[30px] my:py-[70px] lg:my-[100px]  container"
+    >
       <h2 className="text-4xl md:text-6xl ">Our Roadmap</h2>
       <div className="  relative overflow-hidden pt-[45px] lg:pt-[80px]">
         <div className=" flex justify-end">
