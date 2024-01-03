@@ -21,6 +21,7 @@ const config: Config = {
         "f2-bulp":
           "linear-gradient(180deg, #B7BA31 0%, rgba(185, 113, 61, 0.00) 100%)",
         gradient1: "linear-gradient(99deg, #FA7E07 40.51%, #F40010 109.42%)",
+        airdrop: "url('/images/airdrop.png')",
       },
       colors: {
         "dark-50": "#E9F1EE",
@@ -30,6 +31,8 @@ const config: Config = {
           foreground: "hsla(0, 0%, 0%, 1)",
         },
         "dark-1000": "#060404",
+        "yellow-50": "#DEAC00",
+        border: "rgba(255, 255, 255, 0.20)",
       },
       fontSize: {
         "t-28": "1.75em",

@@ -30,6 +30,26 @@ body {
   .heading1 {
     @apply;
   }
+  .airdrop {
+    border-radius: 25px;
+    background: url("/images/airdrop.png") lightgray 50% cover no-repeat,
+      #171717;
+  }
+  .airdrop_heading {
+    background: var(
+      --Gradient-2,
+      linear-gradient(
+        90deg,
+        #deac00 0%,
+        #ecbfbf 38.02%,
+        #f40010 75.83%,
+        #fdd755 100%
+      )
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 .sdsd {
