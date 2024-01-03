@@ -34,12 +34,7 @@ const Header = () => {
 
   return (
     <>
-      <header
-        style={{
-          backgroundColor: "rgba(255, 255, 255, 0.06)",
-        }}
-        className="    z-50   left-0 right-0  backdrop-blur-[10px]   pt-6 flex items-center container justify-between rounded-full px-7 py-4"
-      >
+      <header className=" relative z-30  bg-transparent lg:bg-navbar   z-50   left-0 right-0  backdrop-blur-[10px]   mt-4 flex items-center container justify-between rounded-full px-7 py-4">
         <Link href={"/"} className=" inline-flex items-center  space-x-3">
           <Image
             className=" w-8 h-8 sm:w-auto sm:h-auto"

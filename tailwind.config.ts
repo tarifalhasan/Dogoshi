@@ -23,6 +23,10 @@ const config: Config = {
         gradient1: "linear-gradient(99deg, #FA7E07 40.51%, #F40010 109.42%)",
         g1: "linear-gradient(99deg, #FFD700 40.51%, #FA7E07 58.67%, #F40010 109.42%)",
         airdrop: "url('/images/airdrop.png')",
+        "hero-bulp":
+          "linear-gradient(180deg, #e37379 0%, rgba(228, 25, 39, 0.00) 100%)",
+        tblub:
+          "linear-gradient(180deg, #FF717B 0%, rgba(228, 25, 39, 0.00) 100%)",
       },
       colors: {
         "dark-50": "#E9F1EE",
@@ -34,6 +38,7 @@ const config: Config = {
         "dark-1000": "#060404",
         "yellow-50": "#DEAC00",
         border: "rgba(255, 255, 255, 0.20)",
+        navbar: "rgba(255, 255, 255, 0.06)",
       },
       fontSize: {
         "t-28": "1.75em",
