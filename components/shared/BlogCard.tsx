@@ -26,7 +26,7 @@ const BlogCard: FC<BlogProps> = ({ images, title, slug }) => {
             className=" h-[28px] border-[#5E5E5E] text-[#5E5E5E] px-3 py-2 text-xs"
             variant={"outline"}
           >
-            Read Now <RxCaretRight classNam="w-[5px] h-[5px]" />
+            Read Now <RxCaretRight className="w-[5px] h-[5px]" />
           </Button>
         </div>
       </div>

@@ -9,12 +9,13 @@ const Mining = () => {
     >
       <div className=" flex gap-16 flex-col lg:flex-row lg:items-center justify-between">
         <div className="flex flex-row space-y-3 lg:flex-col w-full items-center lg:items-start justify-between">
-          <h4 className=" text-[40px] lg:text-[48px]">Buy</h4>
+          <h2 className="text-[40px] lg:text-[48px]">Buy</h2>
           <ArrowRight />
-          <h4 className=" text-[40px] lg:text-[48px]">Mine</h4>
+          <h3 className="text-[40px] lg:text-[48px]">Mine</h3>
           <ArrowRight />
-          <h4 className=" text-[40px] lg:text-[48px]">Earn</h4>
+          <h4 className="text-[40px] lg:text-[48px]">Earn</h4>
         </div>
+
         <Image
           className=" lg:hidden"
           alt=""

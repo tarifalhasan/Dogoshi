@@ -36,23 +36,23 @@ const Footer = () => {
         </h2>
         <ul className=" relative z-40 flex pt-8 justify-center items-center space-x-[38px]">
           <li>
-            <Link href={"/"} target="_blank">
-              <FaXTwitter className=" w-10 h-10  text-white" />
+            <Link href={"https://twitter.com/DogoshiInfo"} target="_blank">
+              <FaXTwitter className=" w-10 h-10  text-white transition-all duration-300  hover:text-secondary " />
             </Link>
           </li>
           <li>
             <Link href={"/"} target="_blank">
-              <FaYoutube className=" w-10 h-10  text-white" />
+              <FaYoutube className=" w-10 h-10 transition-all duration-300  hover:text-secondary  text-white" />
+            </Link>
+          </li>
+          <li>
+            <Link href={"https://discord.gg/UdsDJUqz"} target="_blank">
+              <FaDiscord className=" w-10 h-10 transition-all duration-300  hover:text-secondary  text-white" />
             </Link>
           </li>
           <li>
             <Link href={"/"} target="_blank">
-              <FaDiscord className=" w-10 h-10  text-white" />
-            </Link>
-          </li>
-          <li>
-            <Link href={"/"} target="_blank">
-              <FaInstagram className=" w-10 h-10  text-white" />
+              <FaInstagram className=" w-10 h-10 transition-all duration-300  hover:text-secondary  text-white" />
             </Link>
           </li>
         </ul>

@@ -34,7 +34,7 @@ const Tokenomics = () => {
             </p>
             <h3 className="text-xl lg:text-2xl text-white">3,000,000</h3>
           </div>
-          <div className=" py-20 lg:pt-0">
+          <div className=" overflow-hidden py-20 lg:pt-0">
             <Image
               width={1280}
               height={650}
@@ -44,9 +44,9 @@ const Tokenomics = () => {
               quality={90}
             />
             <Image
-              width={450}
+              width={350}
               height={493}
-              className="  md:hidden mx-auto"
+              className="  md:hidden mx-auto w-full h-full object-cover"
               src={"/images/tokenomics_mobile.png"}
               alt="/"
             />

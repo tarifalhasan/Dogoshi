@@ -1,6 +1,7 @@
 import "@/styles/animation.css";
 import "@/styles/globals.css";
 import { cabinet_grotesk } from "@/utils/Font";
+import GoogleAnalytics from "@/utils/googleAnalycs";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cabinet_grotesk.className}>
+        <GoogleAnalytics ga_id="G-KRX26M1KVT" />
         <main> {children}</main>
       </body>
     </html>

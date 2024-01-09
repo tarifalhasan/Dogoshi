@@ -38,7 +38,7 @@ const Header = () => {
         <Link href={"/"} className=" inline-flex items-center  space-x-3">
           <Image
             className=" w-8 h-8 sm:w-auto sm:h-auto"
-            alt="dogoshi"
+            alt="dogoshi logo"
             src={"/images/Logo.svg"}
             width={42}
             height={42}
@@ -56,7 +56,7 @@ const Header = () => {
             </Link>
           ))}
         </nav>
-        <Button className=" hidden lg:block">Buy Now</Button>
+        <Button className=" hidden lg:block">LightPaper</Button>
         <button
           style={{
             background: "rgba(255, 255, 255, 0.10)",
@@ -93,7 +93,7 @@ const Header = () => {
               <MdClose className="w-8 h-8 text-white" />
             </button>
           </div>
-          <ul className=" pt-4 flex flex-col items-center gap-y-4">
+          <nav className=" pt-4 flex flex-col items-center gap-y-4">
             {Links.map((l, i) => (
               <Link
                 onClick={() => setIsOpenMenu(false)}
@@ -104,9 +104,9 @@ const Header = () => {
                 {l.label}
               </Link>
             ))}
-          </ul>
+          </nav>
           <div className=" pt-4 flex justify-center">
-            <Button className="">Buy Now</Button>
+            <Button className="">LightPaper</Button>
           </div>
         </div>
       </div>

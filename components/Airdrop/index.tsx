@@ -3,10 +3,10 @@ import { Button } from "../ui/button";
 
 const AirDrop = () => {
   return (
-    <div className="container">
+    <section className="container">
       <div
         id="airdrop"
-        className=" mb-5 xl:mb-10 relative min-h-[735px] lg:min-h-[480px]  xl:rounded-[25px] rounded-[15px]  mx-auto  bg-no-repeat   container flex lg:items-center  bg-cover  bg-airdrop   "
+        className=" mb-5 xl:mb-10 relative min-h-[735px] lg:min-h-[480px]  xl:rounded-[25px] rounded-[15px]  bg-no-repeat mx-auto  w-full container   flex lg:items-center  bg-cover   bg-airdropm lg:bg-airdrop   "
       >
         <div className=" flex justify-between items-start lg:items-center w-full">
           <div className=" space-y-2 pt-[50px] lg:pt-0 lg:pl-[67px] w-full  xl:basis-1/2">
@@ -34,7 +34,7 @@ const AirDrop = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -23,6 +23,8 @@ const config: Config = {
         gradient1: "linear-gradient(99deg, #FA7E07 40.51%, #F40010 109.42%)",
         g1: "linear-gradient(99deg, #FFD700 40.51%, #FA7E07 58.67%, #F40010 109.42%)",
         airdrop: "url('/images/airdrop.png')",
+        airdropm: "url('/images/bg-airdrop-mobile.png')",
+
         "hero-bulp":
           "linear-gradient(180deg, #e37379 0%, rgba(228, 25, 39, 0.00) 100%)",
         tblub:
