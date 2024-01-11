@@ -12,7 +12,9 @@ export interface PostType {
   _type: string;
   title: string;
   slug: string;
-  author: string;
+  author: any;
   mainImage: any;
   body: any;
+  category: any;
+  publishedAt: string;
 }

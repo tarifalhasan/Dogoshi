@@ -1,33 +1,20 @@
 import BlogCard from "@/components/BlogsPage/BlogCard";
-import { client } from "@/lib/sanity";
+import TrandingNewsCarusel from "@/components/BlogsPage/TrandingNewsCarusel";
+import getAllBlogs from "@/services/getAllBlogs";
 
-export const revalidate = 30; // revalidate at most 30 seconds
-
-async function getData() {
-  const query = `
-  *[_type == 'post'] | order(_createdAt desc) {
-    title,
-    
-      "currentSlug": slug.current,
-      mainImage,
-       publishedAt,
-       category-> {
-        title
-      },
-  }`;
-
-  const data = await client.fetch(query);
-
-  return data;
-}
+export const revalidate = 30;
 
 const Blogs = async () => {
-  const data: BlogCard[] = await getData();
+  const data: BlogCard[] = await getAllBlogs();
 
   return (
     <section className="min-h-screen bg-white">
       <div className=" container">
-        <div className="flex py-5 items-center flex-wrap gap-6">
+        <TrandingNewsCarusel />
+      </div>
+      <div className=" container py-10">
+        <h2 className=" pt">All News</h2>
+        <div className="flex py-12 items-center flex-wrap gap-6">
           <button className=" inline-flex items-center grow-0 gap-x-2 rounded-full py-[6px] px-3 text-sm font-medium  bg-black text-white">
             All News
             <span className="block w-2 h-2 rounded-full  bg-white"></span>
@@ -37,12 +24,12 @@ const Blogs = async () => {
               key={i}
               className=" inline-flex items-center gap-x-2 rounded-full py-[6px] px-3 text-sm font-medium  bg-black/20"
             >
-              {c.category.title}
+              {c?.category.title}
               <span className="block w-2 h-2 rounded-full  bg-yellow-50"></span>
             </button>
           ))}
         </div>
-        <div className="grid py-5 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid  sm:grid-cols-2 xl:grid-cols-4 gap-6">
           {data?.map((item, index) => (
             <BlogCard
               key={index}

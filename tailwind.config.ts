@@ -71,6 +71,7 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        red: "#F40010",
       },
       fontSize: {
         "t-28": "1.75em",

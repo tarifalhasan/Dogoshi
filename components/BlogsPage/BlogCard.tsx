@@ -4,7 +4,7 @@ import { LuClock4 } from "react-icons/lu";
 
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { dateFormat } from "@/lib/formatDate";
-import { urlFor } from "@/lib/sanity";
+import { urlForImage } from "@/sanity/lib/image";
 import { BlogCard } from "@/types";
 import Link from "next/link";
 import { FC } from "react";
@@ -21,13 +21,13 @@ const BlogCard: FC<BlogCard> = ({
       href={`/blogs/${currentSlug}`}
       className="w-full relative cursor-pointer "
     >
-      <AspectRatio ratio={16 / 9}>
+      <AspectRatio ratio={3 / 2}>
         <Image
-          src={urlFor(mainImage).url()}
+          src={urlForImage(mainImage)}
           alt={title}
           width={450}
           height={300}
-          className="rounded-md object-cover"
+          className="rounded-md object-cover h-[240px]"
         />
       </AspectRatio>
       <div className=" pt-5 inline-flex items-center gap-1">

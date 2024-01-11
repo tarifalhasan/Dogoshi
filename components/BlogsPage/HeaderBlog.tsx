@@ -7,20 +7,20 @@ import { useState } from "react";
 import { MdClose } from "react-icons/md";
 import { Button } from "../ui/button";
 
-const Header = () => {
+const BlogHeader = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
   const Links = [
     {
       label: "Mining",
-      href: "#mining",
+      href: "/#mining",
     },
     {
       label: "Tokenomics",
-      href: "#tokenomics",
+      href: "/#tokenomics",
     },
     {
       label: "RoadMap",
-      href: "#road_map",
+      href: "/#road_map",
     },
     {
       label: "Airdrop",
@@ -34,7 +34,12 @@ const Header = () => {
 
   return (
     <>
-      <header className=" relative  bg-transparent lg:bg-navbar   z-50   left-0 right-0  backdrop-blur-[10px]   mt-4 flex items-center container justify-between rounded-full px-7 py-4">
+      <header
+        style={{
+          background: "rgba(0, 0, 0, 0.04)",
+        }}
+        className="  fixed left-0   z-50   l right-0  backdrop-blur-[10px]   mt-4 flex items-center container justify-between rounded-full px-7 py-4"
+      >
         <Link href={"/"} className=" inline-flex items-center  space-x-3">
           <Image
             className=" w-8 h-8 sm:w-auto sm:h-auto"
@@ -43,12 +48,12 @@ const Header = () => {
             width={42}
             height={42}
           />
-          <span className="  text-2xl font-extrabold text-white">Dogoshi</span>
+          <span className="  text-2xl font-extrabold text-black">Dogoshi</span>
         </Link>
         <nav className=" hidden xl:flex items-center space-x-[40px]">
           {Links.map((l, i) => (
             <Link
-              className=" hover:underline text-lg font-medium text-dark-50"
+              className=" hover:underline text-lg font-medium text-black"
               href={l.href}
               key={i}
             >
@@ -56,13 +61,13 @@ const Header = () => {
             </Link>
           ))}
         </nav>
-        <Button className=" hidden lg:block">LightPaper</Button>
+        <Button className=" hidden lg:block bg-secondary">LightPaper</Button>
         <button
           style={{
             background: "rgba(255, 255, 255, 0.10)",
           }}
           onClick={() => setIsOpenMenu((prev) => !prev)}
-          className=" px-[14px] py-[7px] border lg:hidden text-base font-medium tracking-[0.72px] rounded-full text-white"
+          className=" px-[14px] py-[7px] border lg:hidden text-base font-medium tracking-[0.72px] rounded-full text-black"
         >
           Menu
         </button>
@@ -106,7 +111,7 @@ const Header = () => {
             ))}
           </nav>
           <div className=" pt-4 flex justify-center">
-            <Button className="">LightPaper</Button>
+            <Button className=" bg-secondary">LightPaper</Button>
           </div>
         </div>
       </div>
@@ -114,4 +119,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default BlogHeader;
