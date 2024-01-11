@@ -18,7 +18,6 @@ export default async function BlogDetails({
 }) {
   const data: PostType = await getBlogDetails(params.slug);
 
-  console.log(data.author);
   return (
     <div className="  min-h-screen bg-white">
       <div className="  container xl:max-w-[800px] ">
