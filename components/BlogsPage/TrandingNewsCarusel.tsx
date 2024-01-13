@@ -5,12 +5,16 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import getAllBlogs from "@/services/getAllBlogs";
 import { BlogCard } from "@/types";
+import { FC } from "react";
 import TrandingBlogCard from "./TrandingBlogCard";
 
-const TrandingNewsCarusel = async () => {
-  const data: BlogCard[] = await getAllBlogs();
+interface Props {
+  data: BlogCard[];
+}
+
+const TrandingNewsCarusel: FC<Props> = async ({ data }) => {
+  // const data: BlogCard[] = await getAllBlogs();
 
   return (
     <div className=" bg-[#E8F1EE] px-5 pb-12 pt-8 rounded-lg xl:rounded-xl">
@@ -31,8 +35,8 @@ const TrandingNewsCarusel = async () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className=" -left-4 " />
+        <CarouselNext className=" -right-4" />
       </Carousel>
     </div>
   );

@@ -16,13 +16,12 @@ const TrandingBlogCard: FC<BlogCard> = ({
   currentSlug,
 }) => {
   return (
-    <Link
-      href={`/blogs/${currentSlug}`}
-      className="w-full rounded-md overflow-hidden bg-white grid items-center gap-5 sm:grid-cols-2 relative cursor-pointer "
-    >
+    <div className="w-full rounded-md overflow-hidden bg-white grid items-center gap-5 sm:grid-cols-2 relative  ">
       <div className="flex  p-5 h-full flex-col justify-between">
         <p className=" text-[#F40010] text-sm font-medium">{category}</p>
-        <h2 className=" text-xl xl:text-2xl font-bold text-black">{title}</h2>
+        <Link href={`/blogs/${currentSlug}`}>
+          <h2 className=" text-xl xl:text-2xl font-bold text-black">{title}</h2>
+        </Link>
 
         <p className="text-base font-medium text-black opacity-40">
           {dateFormat(publishedAt)}
@@ -37,7 +36,7 @@ const TrandingBlogCard: FC<BlogCard> = ({
           className="rounded-md object-cover h-[240px]"
         />
       </AspectRatio>
-    </Link>
+    </div>
   );
 };
 

@@ -1,4 +1,5 @@
 import BlogCard from "@/components/BlogsPage/BlogCard";
+import SearchBar from "@/components/BlogsPage/SearchBar";
 import TrandingNewsCarusel from "@/components/BlogsPage/TrandingNewsCarusel";
 import getAllBlogs from "@/services/getAllBlogs";
 
@@ -9,8 +10,16 @@ const Blogs = async () => {
 
   return (
     <section className="min-h-screen bg-white">
-      <div className=" container">
-        <TrandingNewsCarusel />
+      <div className=" mb-9 mt-5 bg-black py-4 flex items-center justify-center">
+        <p className=" text-white text-base font-medium text-center lg:text-xl">
+          Over $1.5m in $WSM bought back so far!
+        </p>
+      </div>
+      <div className=" container mb-9">
+        <SearchBar />
+      </div>
+      <div className=" container relative overflow-hidden">
+        <TrandingNewsCarusel data={data} />
       </div>
       <div className=" container py-10">
         <h2 className=" pt">All News</h2>

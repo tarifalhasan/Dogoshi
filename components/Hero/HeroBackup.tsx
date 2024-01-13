@@ -11,7 +11,7 @@ const Hero = () => (
       <div className="flex-col flex items-center space-y-[25px]">
         <div className="flex  flex-col -space-y-6 items-center">
           <div className=" hidden sm:inline-flex space-x-4">
-            <h2 className=" text-[35px] md:text-[60px] lg:text-[80px] text-white font-extrabold">
+            <h2 className=" leading-normal text-[35px] md:text-[60px] lg:text-[80px] text-white font-extrabold">
               Unlocking 21 Million
             </h2>
             <Image

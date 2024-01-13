@@ -9,7 +9,7 @@ const Hero = () => (
       <div className="flex-col flex items-center space-y-[25px]">
         <div className="flex  flex-col -space-y-6 items-center">
           <div className=" hidden sm:inline-flex space-x-4">
-            <h2 className=" text-[35px] md:text-[60px] lg:text-[80px] text-white font-extrabold">
+            <h2 className=" leading-normal text-[35px] md:text-[60px] lg:text-[80px] text-white font-extrabold">
               Unlocking 21 Million
             </h2>
             <Image
@@ -21,11 +21,11 @@ const Hero = () => (
             />
           </div>
           <div className=" pb-4  sm:hidden space-x-4">
-            <h2 className=" leading-[1.2] text-[45px] md:text-[60px] lg:text-[80px] text-white font-extrabold">
+            <h2 className=" leading-normal text-[45px] md:text-[60px] lg:text-[80px] text-white font-extrabold">
               Unlocking 21
             </h2>
             <div className=" space-x-2 flex items-center justify-center">
-              <h2 className=" text-[45px] md:text-[60px] lg:text-[80px] text-white font-extrabold">
+              <h2 className=" text-[45px] leading-normal md:text-[60px] lg:text-[80px] text-white font-extrabold">
                 Million
               </h2>
               <Image
@@ -38,7 +38,7 @@ const Hero = () => (
             </div>
           </div>
           <div>
-            <h2 className=" text-[45px] sm:text-[60px] lg:text-[80px] inline-flex text-center font-extrabold tracking-[1.6px] bg-clip-text g_txt  bg-gradient-2">
+            <h2 className=" leading-normal text-[45px] sm:text-[60px] lg:text-[80px] inline-flex text-center font-extrabold tracking-[1.6px] bg-clip-text g_txt  bg-gradient-2">
               Dogoshi
             </h2>
           </div>

@@ -17,10 +17,7 @@ const BlogCard: FC<BlogCard> = ({
   currentSlug,
 }) => {
   return (
-    <Link
-      href={`/blogs/${currentSlug}`}
-      className="w-full relative cursor-pointer "
-    >
+    <div className=" relative overflow-hidden">
       <AspectRatio ratio={3 / 2}>
         <Image
           src={urlForImage(mainImage)}
@@ -36,14 +33,16 @@ const BlogCard: FC<BlogCard> = ({
           {dateFormat(publishedAt)}
         </p>
       </div>
-      <h2 className=" text-xl xl:text-2xl font-bold text-black">{title}</h2>
+      <Link href={`/blogs/${currentSlug}`}>
+        <h2 className=" text-xl xl:text-2xl font-bold text-black">{title}</h2>
+      </Link>
       <div className=" absolute top-1 left-2">
         <div className=" inline-flex items-center gap-x-2 rounded-full py-[6px] px-3 text-sm font-medium bg-white text-black">
           {category}
           <span className="block w-2 h-2 rounded-full  bg-yellow-50"></span>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 

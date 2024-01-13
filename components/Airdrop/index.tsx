@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "../ui/button";
 
 const AirDrop = () => {
@@ -20,7 +21,16 @@ const AirDrop = () => {
               details as soon as possible.
             </p>
             <div className=" pt-[38px]">
-              <Button variant={"outline"}>Check Status</Button>
+              <Link
+                href={
+                  "https://zealy.io/c/dogoshimemeprotocol/invite/zcjJnfuguM9hBj7_8_CiH"
+                }
+                target="_blank"
+              >
+                <Button variant={"outline"} className=" bg-transparent">
+                  Check Status
+                </Button>
+              </Link>
             </div>
           </div>
           <div className=" ">
