@@ -1,4 +1,3 @@
-import assets1 from "@/public/images/Frame.png";
 import Image from "next/image";
 import Header from "../Header";
 import { Button } from "../ui/button";
@@ -21,11 +20,11 @@ const Hero = () => (
             />
           </div>
           <div className=" pb-4  sm:hidden space-x-4">
-            <h2 className=" leading-normal text-[45px] md:text-[60px] lg:text-[80px] text-white font-extrabold">
+            <h2 className=" leading-[1.2] text-[45px] md:text-[60px] lg:text-[80px] text-white font-extrabold">
               Unlocking 21
             </h2>
             <div className=" space-x-2 flex items-center justify-center">
-              <h2 className=" text-[45px] leading-normal md:text-[60px] lg:text-[80px] text-white font-extrabold">
+              <h2 className=" text-[45px] leading-[1.2] md:text-[60px] lg:text-[80px] text-white font-extrabold">
                 Million
               </h2>
               <Image
@@ -49,9 +48,15 @@ const Hero = () => (
         <Button variant={"secondary"}>Buy Now</Button>
       </div>
     </div>
-    <div className="flex justify-center">
+    <div className="flex  -mt-[120px] sm:-mt-[240px] lg:-mt-[340px] xl:-mt-[450px]  2xl:-mt-[800px] justify-center">
       {/* <HeroAssetsDesk /> */}
-      <Image src={assets1} alt="" />
+      <Image
+        src={"/images/hero.gif"}
+        width={1280}
+        className=" w-full   h-min"
+        height={500}
+        alt=""
+      />
     </div>
     <div className="  z-10 absolute left-0 top-[-50%] w-[700px]  lg:w-[901px] h-[450px] lg:h-[720px] rounded-full blur-[300px] bg-hero-bulp"></div>
     <div className=" w-[400px] lg:w-[655px] transform -translate-x-1/2 h-[500px]  lg:h-[655px] absolute left-1/2 top-[45%]  rounded-full bg-f2-bulp blur-[300px]"></div>

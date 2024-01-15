@@ -3,9 +3,9 @@ const RoadMap = () => {
     <section id="road_map" className=" my-[70px] lg:my-[100px]  container">
       <h2 className="text-4xl md:text-6xl ">Our Roadmap</h2>
 
-      <div className="pt-[45px] lg:pt-[80px]">
+      <div className="pt-[45px] w-full lg:pt-[80px]">
         <svg
-          className=" lg:hidden"
+          className=" w-full lg:hidden"
           width={370}
           height={695}
           viewBox="0 0 370 695"
@@ -213,7 +213,7 @@ const RoadMap = () => {
         </svg>
         <>
           <svg
-            className=" lg:block hidden"
+            className=" w-full lg:block hidden"
             width={1240}
             height={576}
             viewBox="0 0 1240 576"
