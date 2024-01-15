@@ -3,11 +3,15 @@
 import { cn } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { MdClose } from "react-icons/md";
 import { Button } from "../ui/button";
 
 const Header = () => {
+  const pathName = usePathname();
+  const [header, setHeader] = useState(false);
+  const [nav, setNav] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
   const Links = [
     {
@@ -31,10 +35,32 @@ const Header = () => {
       href: "/blogs",
     },
   ];
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 40) {
+        setHeader(true);
+      } else {
+        setHeader(false);
+      }
+    };
 
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
   return (
     <>
-      <header className=" relative  bg-transparent lg:bg-navbar   z-50   left-0 right-0  backdrop-blur-[10px]   mt-4 flex items-center container justify-between rounded-full px-7 py-4">
+      <header
+        className={cn(
+          "   z-50   left-0 right-0  top-0  mt-4 flex items-center container   fixed justify-between rounded-full px-7 py-4",
+
+          !header
+            ? "bg-transparent lg:bg-navbar backdrop-blur-[10px]   "
+            : " bg-blac"
+        )}
+      >
         <Link href={"/"} className=" inline-flex items-center  space-x-3">
           <Image
             className=" w-8 h-8 sm:w-auto sm:h-auto"

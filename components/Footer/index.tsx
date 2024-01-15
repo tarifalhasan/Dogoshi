@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaDiscord, FaTelegram, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { ArrowIcon } from "../svgs/incons";
 
 const Footer = () => {
   return (
@@ -65,6 +66,127 @@ const Footer = () => {
               background: "rgba(255, 255, 255, 0.32)",
             }}
           ></div>
+        </div>
+        <div className="flex py-8 relative overflow-hidden z-40  items-start justify-between flex-wrap lg:max-w-[85%] lg:flex-nowrap xl:max-w-[70%]">
+          <div className=" space-y-5">
+            <div>
+              <h2 className=" text-lg sm:text-2xl font-bold text-white">
+                Learn
+              </h2>
+            </div>
+            <ul className=" space-y-2">
+              <li>
+                <p className=" text-sm sm:text-base text-white font-medium">
+                  Bitcoin Staking Protocol
+                </p>
+              </li>
+              <li>
+                <p className=" text-sm sm:text-base text-white font-medium">
+                  Bitcoin Staking Litepaper
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div className=" space-y-5">
+            <div>
+              <h2 className=" text-lg sm:text-2xl font-bold text-white">
+                About
+              </h2>
+            </div>
+            <ul className=" space-y-2">
+              <li>
+                <Link href={"/"}>
+                  <p className=" text-sm sm:text-base text-white font-medium">
+                    Team{" "}
+                  </p>
+                </Link>
+              </li>
+              <li>
+                <Link href={"/"}>
+                  <p className=" text-sm sm:text-base text-white font-medium">
+                    Media
+                  </p>
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className=" space-y-5">
+            <div>
+              <h2 className=" text-lg sm:text-2xl font-bold text-white">
+                Resources
+              </h2>
+            </div>
+            <ul className=" space-y-2">
+              <li>
+                <Link href={"/"}>
+                  <p className=" text-sm sm:text-base text-white font-medium">
+                    Privacy Policy
+                  </p>
+                </Link>
+              </li>
+              <li>
+                <Link href={"/"}>
+                  <p className=" text-sm sm:text-base text-white font-medium">
+                    Cookies
+                  </p>
+                </Link>
+              </li>
+              <li>
+                <Link href={"/"}>
+                  <p className=" text-sm sm:text-base text-white font-medium">
+                    Terms of Use
+                  </p>
+                </Link>
+              </li>
+              <li>
+                <Link href={"/"}>
+                  <p className=" text-sm sm:text-base text-white font-medium">
+                    Whitepaper
+                  </p>
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className=" space-y-5">
+            <div className="  inline-flex items-center gap-[5px]">
+              <h2 className=" text-lg sm:text-2xl font-bold text-white">
+                About
+              </h2>
+              <ArrowIcon />
+            </div>
+            <ul className=" space-y-2">
+              <li>
+                <Link href={"/"}>
+                  <div className=" inline-flex items-center gap-[5px]">
+                    <p className=" text-sm sm:text-base text-white font-medium">
+                      Faqs
+                    </p>
+                    <ArrowIcon />
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link href={"/"}>
+                  <div className=" inline-flex items-center gap-[5px]">
+                    <p className=" text-sm sm:text-base text-white font-medium">
+                      Tokenomics
+                    </p>
+                    <ArrowIcon />
+                  </div>
+                </Link>
+              </li>{" "}
+              <li>
+                <Link href={"/"}>
+                  <div className=" inline-flex items-center gap-[5px]">
+                    <p className=" text-sm sm:text-base text-white font-medium">
+                      Ecosystem
+                    </p>
+                    <ArrowIcon />
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="">
           <div className=" py-5">

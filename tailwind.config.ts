@@ -41,7 +41,7 @@ const config: Config = {
         "yellow-50": "#DEAC00",
         border: "rgba(255, 255, 255, 0.20)",
         navbar: "rgba(255, 255, 255, 0.06)",
-
+        blac: "rgba(0, 0, 0,2)",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",

@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 const Hero = () => (
   <div className=" overflow-hidden  relative  pb-[3%] n bg-black">
     <Header />
-    <div className="pt-[80px] relative z-20">
+    <div className="pt-[140px] relative z-20">
       <div className="flex-col flex items-center space-y-[25px]">
         <div className="flex  flex-col -space-y-6 items-center">
           <div className=" hidden sm:inline-flex space-x-4">
