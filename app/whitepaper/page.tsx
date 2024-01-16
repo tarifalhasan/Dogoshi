@@ -1,5 +1,6 @@
 "use client";
 import BlogHeader from "@/components/BlogsPage/HeaderBlog";
+import Footer from "@/components/Footer";
 // PDFViewer.js
 
 const Whitepaper = () => {
@@ -14,7 +15,7 @@ const Whitepaper = () => {
           className=" min-h-screen"
         />
       </div>
-      {/* <ViewDocs pdfUrl="/Dogoshi_Whitepaper.pdf" /> */}
+      <Footer />
     </div>
   );
 };

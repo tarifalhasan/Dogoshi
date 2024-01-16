@@ -28,10 +28,10 @@ const Header = () => {
     },
     {
       label: "Airdrop",
-      href: "#airdrop",
+      href: "https://zealy.io/c/dogoshimemeprotocol/invite/zcjJnfuguM9hBj7_8_CiH",
     },
     {
-      label: "Blog",
+      label: "Blogs",
       href: "/blogs",
     },
   ];
@@ -77,6 +77,7 @@ const Header = () => {
               className=" hover:underline text-lg font-medium text-dark-50"
               href={l.href}
               key={i}
+              target={i === 3 ? "_blank" : "_self"}
             >
               {l.label}
             </Link>

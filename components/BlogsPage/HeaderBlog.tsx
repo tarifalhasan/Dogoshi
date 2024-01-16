@@ -14,22 +14,22 @@ const BlogHeader = () => {
   const Links = [
     {
       label: "Mining",
-      href: "/#mining",
+      href: "#mining",
     },
     {
       label: "Tokenomics",
-      href: "/#tokenomics",
+      href: "#tokenomics",
     },
     {
       label: "RoadMap",
-      href: "/#road_map",
+      href: "#road_map",
     },
     {
       label: "Airdrop",
-      href: "#airdrop",
+      href: "https://zealy.io/c/dogoshimemeprotocol/invite/zcjJnfuguM9hBj7_8_CiH",
     },
     {
-      label: "Blog",
+      label: "Blogs",
       href: "/blogs",
     },
   ];
@@ -58,6 +58,7 @@ const BlogHeader = () => {
               className=" hover:underline text-lg font-medium text-black"
               href={l.href}
               key={i}
+              target={i === 3 ? "_blank" : "_self"}
             >
               {l.label}
             </Link>

@@ -1,13 +1,33 @@
 import BlogCard from "@/components/BlogsPage/BlogCard";
-import SearchBar from "@/components/BlogsPage/SearchBar";
 import TrandingNewsCarusel from "@/components/BlogsPage/TrandingNewsCarusel";
 import getAllBlogs from "@/services/getAllBlogs";
+import Search from "./search";
 
 export const revalidate = 30;
 
-const Blogs = async () => {
-  const data: BlogCard[] = await getAllBlogs();
+const Blogs = async ({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined };
+}) => {
+  const search =
+    typeof searchParams.search === "string" ? searchParams.search : undefined;
 
+  const data: BlogCard[] = await getAllBlogs();
+  // Filter blogs based on the search criteria (title or category)
+  const filteredData = data.filter((blog) => {
+    // If search term exists, filter based on title or category
+    if (search) {
+      const titleMatch = blog.title
+        .toLowerCase()
+        .includes(search.toLowerCase());
+      const categoryMatch = blog.category.title
+        .toLowerCase()
+        .includes(search.toLowerCase());
+      return titleMatch || categoryMatch;
+    }
+    return true; // If no search term, include all blogs
+  });
   return (
     <section className="min-h-screen bg-white">
       <div className=" mb-9 mt-5 bg-black py-4 flex items-center justify-center">
@@ -16,7 +36,7 @@ const Blogs = async () => {
         </p>
       </div>
       <div className=" container mb-9">
-        <SearchBar />
+        <Search />
       </div>
       <div className=" container relative overflow-hidden">
         <TrandingNewsCarusel data={data} />
@@ -39,7 +59,7 @@ const Blogs = async () => {
           ))}
         </div>
         <div className="grid  sm:grid-cols-2 xl:grid-cols-4 gap-6">
-          {data?.map((item, index) => (
+          {filteredData?.map((item, index) => (
             <BlogCard
               key={index}
               mainImage={item.mainImage}
