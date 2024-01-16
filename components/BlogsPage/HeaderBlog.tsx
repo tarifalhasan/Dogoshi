@@ -3,11 +3,13 @@
 import { cn } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { MdClose } from "react-icons/md";
 import { Button } from "../ui/button";
 
 const BlogHeader = () => {
+  const router = useRouter();
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
   const Links = [
     {
@@ -61,7 +63,12 @@ const BlogHeader = () => {
             </Link>
           ))}
         </nav>
-        <Button className=" hidden lg:block bg-secondary">LightPaper</Button>
+        <Button
+          onClick={() => router.push("/whitepaper")}
+          className=" hidden lg:block bg-secondary"
+        >
+          LightPaper
+        </Button>
         <button
           style={{
             background: "rgba(255, 255, 255, 0.10)",
@@ -111,7 +118,12 @@ const BlogHeader = () => {
             ))}
           </nav>
           <div className=" pt-4 flex justify-center">
-            <Button className=" bg-secondary">LightPaper</Button>
+            <Button
+              onClick={() => router.push("/whitepaper")}
+              className=" bg-secondary"
+            >
+              LightPaper
+            </Button>
           </div>
         </div>
       </div>

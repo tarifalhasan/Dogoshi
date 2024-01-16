@@ -3,15 +3,15 @@
 import { cn } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { MdClose } from "react-icons/md";
 import { Button } from "../ui/button";
 
 const Header = () => {
-  const pathName = usePathname();
+  const router = useRouter();
   const [header, setHeader] = useState(false);
-  const [nav, setNav] = useState(false);
+
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
   const Links = [
     {
@@ -82,7 +82,12 @@ const Header = () => {
             </Link>
           ))}
         </nav>
-        <Button className=" hidden lg:block">LightPaper</Button>
+        <Button
+          onClick={() => router.push("/whitepaper")}
+          className=" hidden lg:block"
+        >
+          LightPaper
+        </Button>
         <button
           style={{
             background: "rgba(255, 255, 255, 0.10)",
@@ -132,7 +137,9 @@ const Header = () => {
             ))}
           </nav>
           <div className=" pt-4 flex justify-center">
-            <Button className="">LightPaper</Button>
+            <Button onClick={() => router.push("/whitepaper")} className="">
+              LightPaper
+            </Button>
           </div>
         </div>
       </div>
