@@ -34,6 +34,7 @@ const Blogs = async ({
         <p className=" text-white text-base font-medium text-center lg:text-xl">
           Over $1.5m in $WSM bought back so far!
         </p>
+        {/* "Sdsds" */}
       </div>
       <div className=" container mb-9">
         <Search />
