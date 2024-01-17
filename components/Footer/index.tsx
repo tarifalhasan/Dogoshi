@@ -47,7 +47,7 @@ const Footer = () => {
             </Link>
           </li>
           <li>
-            <Link href={"https://discord.gg/UdsDJUqz"} target="_blank">
+            <Link href={"https://discord.gg/PRSm5ekPPh"} target="_blank">
               <FaDiscord className=" w-10 h-10 transition-all duration-300  hover:text-secondary  text-white" />
             </Link>
           </li>
