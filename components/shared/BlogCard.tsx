@@ -10,7 +10,6 @@ export interface BlogProps {
   currentSlug: string;
 }
 const BlogCard: FC<BlogProps> = ({ mainImage, title, currentSlug }) => {
-  console.log(currentSlug);
   return (
     <div className="  overflow-hidden bg-white rounded-2xl w-full ">
       <Image

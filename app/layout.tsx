@@ -18,19 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cabinet_grotesk.className}>
-        <NextTopLoader
-          color="#FF0000"
-          initialPosition={0.08}
-          crawlSpeed={200}
-          height={3}
-          crawl={true}
-          showSpinner={true}
-          easing="ease"
-          speed={200}
-          shadow="0 0 10px #2299DD,0 0 5px #2299DD"
-          zIndex={1600}
-          showAtBottom={false}
-        />
+        <NextTopLoader color="#FF0000" zIndex={1600} />
         <GoogleAnalytics ga_id="G-KRX26M1KVT" />
         <main>{children}</main>
       </body>

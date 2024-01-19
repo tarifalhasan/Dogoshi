@@ -36,8 +36,9 @@ const AirDrop = () => {
           <div className=" ">
             <Image
               className=" absolute right-0 bottom-0"
-              src={"/images/Dog1.svg"}
+              src={"/images/Dog.png"}
               alt="dog"
+              quality={90}
               width={528}
               height={377}
             />
