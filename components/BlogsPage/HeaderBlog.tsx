@@ -26,7 +26,7 @@ const BlogHeader = () => {
     },
     {
       label: "Airdrop",
-      href: "https://zealy.io/c/dogoshimemeprotocol/invite/zcjJnfuguM9hBj7_8_CiH",
+      href: "",
     },
     {
       label: "Blogs",
@@ -64,12 +64,11 @@ const BlogHeader = () => {
             </Link>
           ))}
         </nav>
-        <Button
-          onClick={() => router.push("/whitepaper")}
-          className=" hidden lg:block bg-secondary"
-        >
-          LightPaper
-        </Button>
+        <Link href={"/whitepaper"}>
+          <Button className=" hidden bg-secondary hover:bg-secondary/80 lg:block">
+            LightPaper
+          </Button>
+        </Link>
         <button
           style={{
             background: "rgba(255, 255, 255, 0.10)",
@@ -119,12 +118,11 @@ const BlogHeader = () => {
             ))}
           </nav>
           <div className=" pt-4 flex justify-center">
-            <Button
-              onClick={() => router.push("/whitepaper")}
-              className=" bg-secondary"
-            >
-              LightPaper
-            </Button>
+            <Link href={"/whitepaper"}>
+              <Button className=" hidden bg-secondary hover:bg-secondary/80 lg:block">
+                LightPaper
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
